@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="style.css">
-		<title>Luca's Floating Domains</title>
-	</head>
-
-	<body>
-		<div class="wrapper">
-			<div class="cat">
-				<span class="eyes left"></span>
-				<span class="eyes right"></span>
-				<span class="mouth"></span>
-			</div>
-
-			<div class="moon">
-				<div class="sphere"></div>
-			</div>
-
-			<div class="cloud-container">
-				<div class="cloud"></div>
-				<div class="cloud"></div>
-				<div class="cloud"></div>
-				<div class="cloud"></div>
-			</div>
-		</div>
-
-		<div class="signature">
-			<p>This domain is owned by <a href="https://github.com/1sythe">Luca</a> and currently does not have its own page :( Come back soon!</p>
-		</div>
-	</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #rick {
+                display: none;
+            }
+        </style>
+        <script>
+            function playRick() {
+                const rick = document.getElementById('rick'); // get element
+                rick.style.display = 'block'; // unhide video
+                rick.requestFullscreen(); // enter full screen mode
+                rick.setAttribute('src', rick.getAttribute('src') + '?autoplay=1'); // autoplay video
+            }
+        </script>
+    </head>
+    <body>
+        <iframe id="rick" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button onclick="playRick();">Click Me</button>
+    </body>
 </html>
